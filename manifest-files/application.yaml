@@ -11,7 +11,7 @@ spec:
   source: 
     path: manifest-files
     repoURL: "https://github.com/sumitpurandare/argocd-course-apps-definitions.git"
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
