@@ -10,7 +10,7 @@ spec:
   project: default
   source: 
     path: manifest-files
-    repoURL: "https://github.com/sumitpurandare/argocd-course-apps-definitions.git"
+    repoURL: "https://github.com/sumitpurandare/argo-cd-manifests.git"
     targetRevision: main
   syncPolicy:
     syncOptions:
