@@ -4,7 +4,7 @@ metadata:
   name: nginx-app
 spec:
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    repoURL: https://github.com/sumitpurandare/argo-cd-manifests.git
     targetRevision: HEAD
     path: kustomize-files
 
