@@ -2,9 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sealed-secrets
-  namespace: argocd
+  namespace: default
 spec:
-  project: default
+  project: beta-project
   source:
     chart: sealed-secrets
     repoURL: https://bitnami-labs.github.io/sealed-secrets
@@ -13,4 +13,4 @@ spec:
       releaseName: sealed-secrets
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: argocd
+    namespace: default
