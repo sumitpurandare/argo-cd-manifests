@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+spec:
+  project: my-project
+  source:
+    repoURL: https://github.com/sumitpurandare/argo-cd-manifests.git
+    path: .
+    targetRevision: HEAD
+    secrets:
+      - secretKeyRef:
+          name: gitlab-credentials
+          key: token
