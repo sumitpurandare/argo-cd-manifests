@@ -1,12 +1,20 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: apps/v1
 kind: Application
-metadata:
+metadata: 
   name: nginx
-spec:
-  source:
-    repoURL: https://github.com/sumitpurandare/argo-cd-manifests.git
-    targetRevision: HEAD
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: nginx
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
     path: kustomize-files
-
-    kustomize:
+    repoURL: "https://github.com/sumitpurandare/argo-cd-manifests.git"
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+  kustomize:
       version: v3.5.4
+
