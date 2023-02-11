@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: https://github.com/sumitpurandare/argo-cd-manifests.git
     path: .
-    targetRevision: HEAD
+    targetRevision: MAIN
     secrets:
       - secretKeyRef:
           name: gitlab-credentials
